@@ -1,0 +1,242 @@
+#dashboard-wrapper {
+    padding-left: 300px;
+    transition: all 0.4s ease 0s;
+}
+
+#dashboard-sidebar {
+    background-color: #2C3E50;
+    color: #D2D7D3;
+    margin-left: -300px;
+    left: 300px;
+    width: 300px;
+    position: fixed;
+    height: 100%;
+    overflow-y: auto;
+    z-index: 1000;
+    text-align: center;
+}
+
+#dashboard-sidebar #logo {
+    font-family: cutive, sans-serif;
+    font-weight: bold;
+    font-size: 20px;
+    color: #81CFE0;
+    margin: 50px 0 50px 0;
+}
+
+#dashboard-sidebar #user {
+    font-family: maven-pro, sans-serif;
+}
+#dashboard-sidebar #user #name {
+    font-weight: bold;
+    color: #F5D76E;
+}
+
+#dashboard-sidebar #logout {
+    text-decoration: underline;
+    cursor: pointer;
+    -webkit-transition: all 500ms ease-out;
+    -moz-transition: all 500ms ease-out;
+    -o-transition: all 500ms ease-out;
+    transition: all 500ms ease-out;
+}
+#dashboard-sidebar #logout:hover, #dashboard-sidebar #logout:active, #dashboard-sidebar #logout:focus {
+    text-decoration: none;
+    color: #81CFE0;
+    padding-left: 7px;
+}
+
+#dashboard-sidebar .sidebar-item-label {
+    font-family: cutive, sans-serif;
+    font-size: 0.8em;
+}
+#dashboard-sidebar .sidebar-item-data {
+    font-family: jura, sans-serif;
+    font-size: 1.8em;
+}
+
+#dashboard-sidebar #progress {
+    margin: 0 auto;
+    padding: 10px 5px;
+    width: 90%;
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+#dashboard-sidebar #progress-bar-c {
+    background-color: #68C3A3;
+    color: #2C3E50;
+    padding-left: 10px;
+    float: left;
+    font-family: jura, sans-serif;
+    font-size: 1.2em;
+    margin-top: 11px;
+}
+#dashboard-sidebar #progress-bar-r {
+    background-color: #D2D7D3;
+    font-family: jura, sans-serif;
+    font-size: 1.2em;
+    font-weight: 600;
+    width: 100%;
+    margin-top: 11px;
+}
+
+#dashboard-sidebar #number {
+    margin: 30px 0;
+    padding: 10px 5px;
+}
+
+#dashboard-sidebar #gamify {
+    background-color: #F5D76E;
+    color: #2C3E50;
+    border-radius: 5px;
+    width: 90%;
+    margin: 0 auto;
+    margin-top: 20px;
+    padding: 10px 5px;
+}
+#dashboard-sidebar .gamify-item {
+    margin: 12px 5px;
+}
+#dashboard-sidebar .gamify-item-label {
+    font-family: cutive, sans-serif;
+    font-size: 0.8em;
+}
+#dashboard-sidebar .gamify-item-data {
+    font-family: jura, sans-serif;
+    font-size: 1.5em;
+    font-weight: 600;
+}
+#dashboard-sidebar #view-badges {
+    font-family: maven-pro, sans-serif;
+    background-color: #F9BF3B;
+    color: #FFFFFF;
+    border-radius: 5px;
+    padding: 10px;
+    cursor: pointer;
+    -webkit-transition: all 800ms ease-out;
+    -moz-transition: all 800ms ease-out;
+    -o-transition: all 800ms ease-out;
+    transition: all 800ms ease-out;
+}
+#dashboard-sidebar #view-badges:hover, #dashboard-sidebar #view-badges:focus, #dashboard-sidebar #view-badges:active {
+    color: #F5D76E;
+    background-color: #FFFFFF;
+}
+
+#dashboard-content-wrapper {
+    width: 100%;
+}
+
+.summary-graphs {
+    height: 100% auto;
+}
+
+/* pie graph styles */
+.pie-graph-label {
+    font-family: maven-pro, sans-serif;
+    font-size: 1.2em;
+    fill: #34495E;
+}
+.arc path {
+    stroke: #FFFFFF;
+    stroke-width: 2px;
+    cursor: pointer;
+}
+
+/* line chart styles */
+.axis {
+    font-family: maven-pro, sans-serif;
+    font-size: 0.8em;
+    fill: #34495E;
+}
+
+.axis path, .axis line {
+    fill: none;
+    stroke: #D2D7D3;
+    shape-rendering: crispEdges;
+}
+
+.line {
+    fill: none;
+    stroke: #2C3E50;
+    stroke-width: 2px;
+}
+
+.details .categories {
+    padding: 10px 50px 20px 20px;
+    color: #34495E;
+}
+
+.details .categories table {
+    width: 100%;
+}
+
+.details .categories .category-header {
+    border-bottom: 1px solid #D2D7D3;
+    font-family: cutive, sans-serif;
+    padding: 4px 3px;
+    font-size: 0.8em;
+    text-align: center;
+}
+.details .categories .category-label {
+    width: 50%;
+    font-family: maven-pro, sans-serif;
+    padding: 10px 4px;
+    font-size: 1.2em;
+    text-align: center;
+}
+
+.details .categories .category-number {
+    width: 50%;
+    font-family: jura, sans-serif;
+    padding: 10px 4px;
+    font-size: 1.2em;
+    text-align: center;
+}
+
+#explore {
+    margin: 20px 20px 10px 60px;
+}
+
+#explore .explore-header {
+    font-family: maven-pro, sans-serif;
+    font-size: 1.8em;
+    color: #D2D7D3;
+}
+
+#explore .explore-links {
+    margin: 12px 0;
+}
+
+#explore .explore-links a {
+    color: #D2D7D3;
+    font-family: cutive, sans-serif;
+    text-decoration: none;
+    padding-left: 60px;
+    -webkit-transition: all 500ms ease-out;
+    -moz-transition: all 500ms ease-out;
+    -o-transition: all 500ms ease-out;
+    transition: all 500ms ease-out;
+}
+
+#explore .explore-links a:hover, #explore .explore-links a:focus, #explore .explore-links a:active {
+    color: #81CFE0;
+    padding-left: 50px;
+}
+
+/* animations */
+.anim-delay-1 {
+    animation-delay: 0.3s;
+    -moz-animation-delay: 0.3s;
+    -webkit-animation-delay: 0.3s;
+}
+.anim-delay-2 {
+    animation-delay: 0.6s;
+    -moz-animation-delay: 0.6s;
+    -webkit-animation-delay: 0.6s;
+}
+.anim-delay-3 {
+    animation-delay: 0.9s;
+    -moz-animation-delay: 0.9s;
+    -webkit-animation-delay: 0.9s;
+}
