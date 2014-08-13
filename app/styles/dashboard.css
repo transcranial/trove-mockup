@@ -113,6 +113,7 @@
     border-radius: 5px;
     padding: 10px;
     cursor: pointer;
+    text-decoration: none;
     -webkit-transition: all 800ms ease-out;
     -moz-transition: all 800ms ease-out;
     -o-transition: all 800ms ease-out;
@@ -121,64 +122,103 @@
 #dashboard-sidebar #view-badges:hover, #dashboard-sidebar #view-badges:focus, #dashboard-sidebar #view-badges:active {
     color: #F5D76E;
     background-color: #FFFFFF;
+    text-decoration: none;
 }
 
-#dashboard-content-wrapper {
+
+#dashboard-header {
+    background-color: #FFFFFF;
+    color: #D2D7D3;
+}
+
+#dashboard-header #logo {
+    font-family: cutive, sans-serif;
+    font-weight: bold;
+    font-size: 20px;
+    color: #81CFE0;
+    float: left;
+    padding: 20px 10px 20px 60px;
+}
+
+#dashboard-header #user {
+    font-family: maven-pro, sans-serif;
+    float: right;
+    padding: 23px 40px 20px 10px;
+}
+#dashboard-header #user #name {
+    font-weight: bold;
+    color: #F5D76E;
+}
+
+#dashboard-header #logout {
+    text-decoration: underline;
+    cursor: pointer;
+    -webkit-transition: all 500ms ease-out;
+    -moz-transition: all 500ms ease-out;
+    -o-transition: all 500ms ease-out;
+    transition: all 500ms ease-out;
+}
+#dashboard-header #logout:hover, #dashboard-header #logout:active, #dashboard-header #logout:focus {
+    text-decoration: none;
+    color: #81CFE0;
+}
+
+.dashboard-content-wrapper {
     width: 100%;
 }
 
-.summary-graphs {
+#summary-view .summary-graphs {
     height: 100% auto;
 }
 
 /* pie graph styles */
-.pie-graph-label {
+#summary-view .pie-graph-label {
     font-family: maven-pro, sans-serif;
     font-size: 1.2em;
     fill: #34495E;
 }
-.arc path {
+#summary-view .arc path {
     stroke: #FFFFFF;
     stroke-width: 2px;
     cursor: pointer;
 }
 
 /* line chart styles */
-.axis {
+#summary-view .axis {
     font-family: maven-pro, sans-serif;
     font-size: 0.8em;
     fill: #34495E;
 }
 
-.axis path, .axis line {
+#summary-view .axis path, .axis line {
     fill: none;
     stroke: #D2D7D3;
     shape-rendering: crispEdges;
 }
 
-.line {
+#summary-view .line {
     fill: none;
     stroke: #2C3E50;
     stroke-width: 2px;
 }
 
-.details .categories {
+#summary-view .details .categories {
     padding: 10px 50px 20px 20px;
     color: #34495E;
 }
 
-.details .categories table {
+#summary-view .details .categories table {
     width: 100%;
 }
 
-.details .categories .category-header {
+#summary-view .details .categories .category-header {
     border-bottom: 1px solid #D2D7D3;
     font-family: cutive, sans-serif;
     padding: 4px 3px;
     font-size: 0.8em;
     text-align: center;
 }
-.details .categories .category-label {
+#summary-view .details .categories .category-label {
     width: 50%;
     font-family: maven-pro, sans-serif;
     padding: 10px 4px;
@@ -186,7 +226,7 @@
     text-align: center;
 }
 
-.details .categories .category-number {
+#summary-view .details .categories .category-number {
     width: 50%;
     font-family: jura, sans-serif;
     padding: 10px 4px;
@@ -194,21 +234,21 @@
     text-align: center;
 }
 
-#explore {
+#summary-view #explore {
     margin: 20px 20px 10px 60px;
 }
 
-#explore .explore-header {
+#summary-view #explore .explore-header {
     font-family: maven-pro, sans-serif;
     font-size: 1.8em;
     color: #D2D7D3;
 }
 
-#explore .explore-links {
+#summary-view #explore .explore-links {
     margin: 12px 0;
 }
 
-#explore .explore-links a {
+#summary-view #explore .explore-links a {
     color: #D2D7D3;
     font-family: cutive, sans-serif;
     text-decoration: none;
@@ -219,9 +259,74 @@
     transition: all 500ms ease-out;
 }
 
-#explore .explore-links a:hover, #explore .explore-links a:focus, #explore .explore-links a:active {
+#summary-view #explore .explore-links a:hover, #explore .explore-links a:focus, #explore .explore-links a:active {
     color: #81CFE0;
     padding-left: 50px;
+}
+
+#rotation-view {
+    text-align: center;
+}
+
+#rotation-view #rotation-carousel {
+    width: 80%;
+    margin: auto;
+}
+
+#rotation-view .rotation-block {
+    padding: 10px;
+    text-align: center;
+    border-top: 2px solid #FFFFFF;
+    cursor: pointer;
+    color: #2C3E50;
+}
+
+#rotation-view .rotation-block:hover {
+    border-top: 2px solid #81CFE0;
+}
+
+#rotation-view .rotation-block-name {
+    font-family: cutive, sans-serif;
+    font-size: 0.8em;
+}
+
+#rotation-view .rotation-block-date {
+    font-family: jura, sans-serif;
+    font-size: 0.8em;
+}
+
+#rotation-view .currentRotation {
+    background-color: #81CFE0;
+    color: #FFFFFF;
+    border-top: 2px solid #81CFE0;
+}
+
+#rotation-view .prevButton {
+    background-color: none;
+    color: #2C3E50;
+    position: absolute; 
+    display: block; 
+    height: 20px; 
+    width: 20px; 
+    line-height: 0; 
+    top: 50%; 
+    margin-top: -10px; 
+    left: -25px; 
+    padding: 0px;
+}
+
+#rotation-view .nextButton {
+    background-color: none;
+    color: #2C3E50;
+    position: absolute; 
+    display: block; 
+    height: 20px; 
+    width: 20px; 
+    line-height: 0; 
+    top: 50%; 
+    margin-top: -10px; 
+    right: -25px; 
+    padding: 0px;
 }
 
 /* animations */

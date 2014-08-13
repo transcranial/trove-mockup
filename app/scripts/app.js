@@ -15,7 +15,8 @@ angular
     'ngResource',
     'ngRoute',
     'ngSanitize',
-    'ngTouch'
+    'ngTouch',
+    'bardo.directives'
   ])
   .config(function ($routeProvider) {
     $routeProvider
@@ -23,9 +24,17 @@ angular
         templateUrl: 'views/main.html',
         controller: 'MainCtrl'
       })
-      .when('/dashboard', {
-        templateUrl: 'views/dashboard.html',
-        controller: 'DashboardCtrl'
+      .when('/dashboard/rotation', {
+        templateUrl: 'views/rotation.html',
+        controller: 'RotationCtrl'
+      })
+      .when('/dashboard/summary', {
+        templateUrl: 'views/summary.html',
+        controller: 'SummaryCtrl'
+      })
+      .when('/badges', {
+        templateUrl: 'views/badges.html',
+        controller: 'BadgesCtrl'
       })
       .otherwise({
         redirectTo: '/'

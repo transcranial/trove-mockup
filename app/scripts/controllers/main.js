@@ -14,7 +14,7 @@ app.controller('MainCtrl', function ($scope, $location) {
     $scope.test = 'pass';
 
     $scope.login = function() {
-        $location.path('/dashboard');
+        $location.path('/dashboard/rotation');
     };
     
 });

@@ -1,0 +1,18 @@
+<div class="container-fluid">
+    <div id="dashboard-header" class="row">
+        <div id="logo" class="animated fadeInLeft"><i class="fa fa-cubes"></i> TROVE</div>
+        <div id="user">
+            Welcome, <span id="name">{{ data.name }}</span> | <span id="logout">logout</span>
+        </div>
+    </div>
+    <div id="rotation-view" class="dashboard-content-wrapper">
+        <div id="rotation-carousel">
+            <slick ng-transclude settings="slickConfig" control="slickHandle">
+                <div class="rotation-block" ng-click="setVisibleRotation($index)" ng-class="{currentRotation: $index==visibleRotationIndex}" ng-repeat="rot in data.rotations">
+                    <span class="rotation-block-name">{{rot.rotationName}}</span><br>
+                    <span class="rotation-block-date">{{rot.rotationDate}}</span>
+                </div>
+            </slick>
+        </div>
+    </div>
+</div>

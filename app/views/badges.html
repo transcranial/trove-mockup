@@ -1,27 +1,24 @@
-<div id="badges-wrapper">
-    <div id="badges-sidebar">
-        <div class="badges-news-item">Shlomo Minkowitz read 1,000 CTs.<br>August 10, 2014</div>
-    </div>
-    <div id="badges-content-wrapper">
-        <div class="badges-points-summary">
-            <div class="container-fluid">
-                <div class="row">
-                    <div class="col-md-6">
-                        Rewards Points
-                    </div>
-                    <div class="col-md-6">
-                        Number of Badges 
-                    </div>
-                </div>
-            </div>
+<div class="container-fluid">
+    <div id="dashboard-header" class="row">
+        <div id="logo" class="animated fadeInLeft"><i class="fa fa-cubes"></i> TROVE</div>
+        <div id="user">
+            Welcome, <span id="name">{{ currentUser.name }}</span> | <span id="logout">logout</span>
         </div>
+    </div>
+    <div id="badges-content-wrapper" class="row">
         <div class="badges">
-            <div class="container-fluid">
-                <div class="row">
-                    <div class="col-md-12">
-                    Badges here.
-                    </div>
-                </div>
+            <div class="points-summary">
+                <span class="points-summary-label">Reward Points</span><br>
+                <span class="points-summary-data">{{data.points | number}}</span>
+            </div>
+            <div class="badges-summary">
+                <span class="badges-summary-label">Number of Badges</span><br>
+                <span class="badges-summary-data">{{data.badges | number}}</span>
+            </div>
+
+            <div class="hex" ng-repeat="badge in badges">{{badge.name}} 
+              <div class="corner-1"></div>
+              <div class="corner-2"></div>    
             </div>
         </div>
     </div>

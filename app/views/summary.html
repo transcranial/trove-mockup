@@ -15,19 +15,19 @@
         </div>
         <div id="gamify" class="animated fadeInUp">
             <div class="gamify-item">
-                <span class="gamify-item-label">Reward Points</span><br>
+                <span class="gamify-item-label">Minnies</span><br>
                 <span class="gamify-item-data">{{data.points | number}}</span>
             </div>
             <div class="gamify-item">
-                <span class="gamify-item-label">Number of Badges</span><br>
+                <span class="gamify-item-label">Badges</span><br>
                 <span class="gamify-item-data">{{data.badges | number}}</span>
             </div>
             <div class="gamify-item">
-                <span id="view-badges"><i class="fa fa-trophy"></i> View My Badges</span>
+                <span id="view-badges" ng-click="viewBadges()"><i class="fa fa-trophy"></i> View My Badges</span>
             </div>
         </div>
     </div>
-    <div id="dashboard-content-wrapper" class="animated fadeIn anim-delay-2">
+    <div id="summary-view" class="dashboard-content-wrapper animated fadeIn anim-delay-2">
         <div class="summary-graphs">
             <div class="container-fluid">
                 <div class="row">

@@ -2,14 +2,18 @@
 
 /**
  * @ngdoc function
- * @name mockupApp.controller:DashboardCtrl
+ * @name mockupApp.controller:SummaryCtrl
  * @description
- * # DashboardCtrl
+ * # SummaryCtrl
  * Controller of the mockupApp
  */
 var app = angular.module('mockupApp');
 
-app.controller('DashboardCtrl', function ($scope) {
+app.controller('SummaryCtrl', function ($scope, $location) {
+
+    $scope.viewBadges = function() {
+        $location.path('/badges');
+    };
 
     // blue, yellow, green, red, purple, orange
     $scope.colors = ['#5C97BF', '#F4D03F', '#1BBC9B', '#D24D57', '#9B59B6', '#F89406'];
